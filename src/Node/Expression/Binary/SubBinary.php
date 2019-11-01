@@ -22,4 +22,4 @@ class SubBinary extends AbstractBinary
     }
 }
 
-class_alias('TwigKagg\Node\Expression\Binary\SubBinary', 'Twig_Node_Expression_Binary_Sub');
+class_alias('TwigKagg\Node\Expression\Binary\SubBinary', 'TwigKagg_Node_Expression_Binary_Sub');

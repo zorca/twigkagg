@@ -38,4 +38,4 @@ class PrintNode extends Node implements NodeOutputInterface
     }
 }
 
-class_alias('TwigKagg\Node\PrintNode', 'Twig_Node_Print');
+class_alias('TwigKagg\Node\PrintNode', 'TwigKagg_Node_Print');

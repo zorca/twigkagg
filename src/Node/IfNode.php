@@ -21,7 +21,7 @@ use TwigKagg\Compiler;
  */
 class IfNode extends Node
 {
-    public function __construct(\Twig_NodeInterface $tests, \Twig_NodeInterface $else = null, $lineno, $tag = null)
+    public function __construct(\TwigKagg_NodeInterface $tests, \TwigKagg_NodeInterface $else = null, $lineno, $tag = null)
     {
         $nodes = ['tests' => $tests];
         if (null !== $else) {
@@ -69,4 +69,4 @@ class IfNode extends Node
     }
 }
 
-class_alias('TwigKagg\Node\IfNode', 'Twig_Node_If');
+class_alias('TwigKagg\Node\IfNode', 'TwigKagg_Node_If');

@@ -77,4 +77,4 @@ class BlockTokenParser extends AbstractTokenParser
     }
 }
 
-class_alias('TwigKagg\TokenParser\BlockTokenParser', 'Twig_TokenParser_Block');
+class_alias('TwigKagg\TokenParser\BlockTokenParser', 'TwigKagg_TokenParser_Block');

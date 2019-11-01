@@ -158,4 +158,4 @@ final class TemplateWrapper
     }
 }
 
-class_alias('TwigKagg\TemplateWrapper', 'Twig_TemplateWrapper');
+class_alias('TwigKagg\TemplateWrapper', 'TwigKagg_TemplateWrapper');

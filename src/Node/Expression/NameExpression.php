@@ -116,4 +116,4 @@ class NameExpression extends AbstractExpression
     }
 }
 
-class_alias('TwigKagg\Node\Expression\NameExpression', 'Twig_Node_Expression_Name');
+class_alias('TwigKagg\Node\Expression\NameExpression', 'TwigKagg_Node_Expression_Name');

@@ -73,4 +73,4 @@ EOF;
     }
 }
 
-class_alias('TwigKagg\Profiler\Dumper\BlackfireDumper', 'Twig_Profiler_Dumper_Blackfire');
+class_alias('TwigKagg\Profiler\Dumper\BlackfireDumper', 'TwigKagg_Profiler_Dumper_Blackfire');

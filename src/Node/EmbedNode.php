@@ -49,4 +49,4 @@ class EmbedNode extends IncludeNode
     }
 }
 
-class_alias('TwigKagg\Node\EmbedNode', 'Twig_Node_Embed');
+class_alias('TwigKagg\Node\EmbedNode', 'TwigKagg_Node_Embed');

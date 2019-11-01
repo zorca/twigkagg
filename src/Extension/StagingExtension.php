@@ -114,4 +114,4 @@ class StagingExtension extends AbstractExtension
     }
 }
 
-class_alias('TwigKagg\Extension\StagingExtension', 'Twig_Extension_Staging');
+class_alias('TwigKagg\Extension\StagingExtension', 'TwigKagg_Extension_Staging');

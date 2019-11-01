@@ -48,4 +48,4 @@ class HtmlDumper extends BaseDumper
     }
 }
 
-class_alias('TwigKagg\Profiler\Dumper\HtmlDumper', 'Twig_Profiler_Dumper_Html');
+class_alias('TwigKagg\Profiler\Dumper\HtmlDumper', 'TwigKagg_Profiler_Dumper_Html');

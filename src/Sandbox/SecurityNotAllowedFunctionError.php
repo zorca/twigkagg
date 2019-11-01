@@ -32,4 +32,4 @@ class SecurityNotAllowedFunctionError extends SecurityError
     }
 }
 
-class_alias('TwigKagg\Sandbox\SecurityNotAllowedFunctionError', 'Twig_Sandbox_SecurityNotAllowedFunctionError');
+class_alias('TwigKagg\Sandbox\SecurityNotAllowedFunctionError', 'TwigKagg_Sandbox_SecurityNotAllowedFunctionError');

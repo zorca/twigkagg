@@ -21,4 +21,4 @@ class GreaterEqualBinary extends AbstractBinary
     }
 }
 
-class_alias('TwigKagg\Node\Expression\Binary\GreaterEqualBinary', 'Twig_Node_Expression_Binary_GreaterEqual');
+class_alias('TwigKagg\Node\Expression\Binary\GreaterEqualBinary', 'TwigKagg_Node_Expression_Binary_GreaterEqual');

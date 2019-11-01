@@ -45,4 +45,4 @@ class ParentExpression extends AbstractExpression
     }
 }
 
-class_alias('TwigKagg\Node\Expression\ParentExpression', 'Twig_Node_Expression_Parent');
+class_alias('TwigKagg\Node\Expression\ParentExpression', 'TwigKagg_Node_Expression_Parent');

@@ -134,4 +134,4 @@ class SandboxNodeVisitor extends AbstractNodeVisitor
     }
 }
 
-class_alias('TwigKagg\NodeVisitor\SandboxNodeVisitor', 'Twig_NodeVisitor_Sandbox');
+class_alias('TwigKagg\NodeVisitor\SandboxNodeVisitor', 'TwigKagg_NodeVisitor_Sandbox');

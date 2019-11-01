@@ -45,4 +45,4 @@ class MethodCallExpression extends AbstractExpression
     }
 }
 
-class_alias('TwigKagg\Node\Expression\MethodCallExpression', 'Twig_Node_Expression_MethodCall');
+class_alias('TwigKagg\Node\Expression\MethodCallExpression', 'TwigKagg_Node_Expression_MethodCall');

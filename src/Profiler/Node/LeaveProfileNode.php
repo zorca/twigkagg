@@ -35,4 +35,4 @@ class LeaveProfileNode extends Node
     }
 }
 
-class_alias('TwigKagg\Profiler\Node\LeaveProfileNode', 'Twig_Profiler_Node_LeaveProfile');
+class_alias('TwigKagg\Profiler\Node\LeaveProfileNode', 'TwigKagg_Profiler_Node_LeaveProfile');

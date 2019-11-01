@@ -32,4 +32,4 @@ class InBinary extends AbstractBinary
     }
 }
 
-class_alias('TwigKagg\Node\Expression\Binary\InBinary', 'Twig_Node_Expression_Binary_In');
+class_alias('TwigKagg\Node\Expression\Binary\InBinary', 'TwigKagg_Node_Expression_Binary_In');

@@ -102,7 +102,7 @@ class EscaperExtension extends AbstractExtension
     }
 }
 
-class_alias('TwigKagg\Extension\EscaperExtension', 'Twig_Extension_Escaper');
+class_alias('TwigKagg\Extension\EscaperExtension', 'TwigKagg_Extension_Escaper');
 }
 
 namespace {

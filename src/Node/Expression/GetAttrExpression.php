@@ -77,4 +77,4 @@ class GetAttrExpression extends AbstractExpression
     }
 }
 
-class_alias('TwigKagg\Node\Expression\GetAttrExpression', 'Twig_Node_Expression_GetAttr');
+class_alias('TwigKagg\Node\Expression\GetAttrExpression', 'TwigKagg_Node_Expression_GetAttr');

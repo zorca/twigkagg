@@ -185,4 +185,4 @@ class Profile implements \IteratorAggregate, \Serializable
     }
 }
 
-class_alias('TwigKagg\Profiler\Profile', 'Twig_Profiler_Profile');
+class_alias('TwigKagg\Profiler\Profile', 'TwigKagg_Profiler_Profile');

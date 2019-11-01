@@ -20,4 +20,4 @@ class BodyNode extends Node
 {
 }
 
-class_alias('TwigKagg\Node\BodyNode', 'Twig_Node_Body');
+class_alias('TwigKagg\Node\BodyNode', 'TwigKagg_Node_Body');

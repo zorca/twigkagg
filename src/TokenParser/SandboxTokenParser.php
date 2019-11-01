@@ -64,4 +64,4 @@ class SandboxTokenParser extends AbstractTokenParser
     }
 }
 
-class_alias('TwigKagg\TokenParser\SandboxTokenParser', 'Twig_TokenParser_Sandbox');
+class_alias('TwigKagg\TokenParser\SandboxTokenParser', 'TwigKagg_TokenParser_Sandbox');

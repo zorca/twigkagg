@@ -36,7 +36,7 @@ class SafeAnalysisNodeVisitor extends AbstractNodeVisitor
         $this->safeVars = $safeVars;
     }
 
-    public function getSafe(\Twig_NodeInterface $node)
+    public function getSafe(\TwigKagg_NodeInterface $node)
     {
         $hash = spl_object_hash($node);
         if (!isset($this->data[$hash])) {
@@ -56,7 +56,7 @@ class SafeAnalysisNodeVisitor extends AbstractNodeVisitor
         }
     }
 
-    protected function setSafe(\Twig_NodeInterface $node, array $safe)
+    protected function setSafe(\TwigKagg_NodeInterface $node, array $safe)
     {
         $hash = spl_object_hash($node);
         if (isset($this->data[$hash])) {
@@ -161,4 +161,4 @@ class SafeAnalysisNodeVisitor extends AbstractNodeVisitor
     }
 }
 
-class_alias('TwigKagg\NodeVisitor\SafeAnalysisNodeVisitor', 'Twig_NodeVisitor_SafeAnalysis');
+class_alias('TwigKagg\NodeVisitor\SafeAnalysisNodeVisitor', 'TwigKagg_NodeVisitor_SafeAnalysis');

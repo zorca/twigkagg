@@ -17,7 +17,7 @@ use TwigKagg\TwigFilter;
 
 class FilterExpression extends CallExpression
 {
-    public function __construct(\Twig_NodeInterface $node, ConstantExpression $filterName, \Twig_NodeInterface $arguments, $lineno, $tag = null)
+    public function __construct(\TwigKagg_NodeInterface $node, ConstantExpression $filterName, \TwigKagg_NodeInterface $arguments, $lineno, $tag = null)
     {
         parent::__construct(['node' => $node, 'filter' => $filterName, 'arguments' => $arguments], [], $lineno, $tag);
     }
@@ -33,7 +33,7 @@ class FilterExpression extends CallExpression
         $this->setAttribute('needs_environment', $filter->needsEnvironment());
         $this->setAttribute('needs_context', $filter->needsContext());
         $this->setAttribute('arguments', $filter->getArguments());
-        if ($filter instanceof \Twig_FilterCallableInterface || $filter instanceof TwigFilter) {
+        if ($filter instanceof \TwigKagg_FilterCallableInterface || $filter instanceof TwigFilter) {
             $this->setAttribute('callable', $filter->getCallable());
         }
         if ($filter instanceof TwigFilter) {
@@ -44,4 +44,4 @@ class FilterExpression extends CallExpression
     }
 }
 
-class_alias('TwigKagg\Node\Expression\FilterExpression', 'Twig_Node_Expression_Filter');
+class_alias('TwigKagg\Node\Expression\FilterExpression', 'TwigKagg_Node_Expression_Filter');

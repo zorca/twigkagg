@@ -32,4 +32,4 @@ class RangeBinary extends AbstractBinary
     }
 }
 
-class_alias('TwigKagg\Node\Expression\Binary\RangeBinary', 'Twig_Node_Expression_Binary_Range');
+class_alias('TwigKagg\Node\Expression\Binary\RangeBinary', 'TwigKagg_Node_Expression_Binary_Range');

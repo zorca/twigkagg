@@ -23,4 +23,4 @@ interface GlobalsInterface
 {
 }
 
-class_alias('TwigKagg\Extension\GlobalsInterface', 'Twig_Extension_GlobalsInterface');
+class_alias('TwigKagg\Extension\GlobalsInterface', 'TwigKagg_Extension_GlobalsInterface');

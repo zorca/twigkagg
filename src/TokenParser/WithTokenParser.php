@@ -54,4 +54,4 @@ class WithTokenParser extends AbstractTokenParser
     }
 }
 
-class_alias('TwigKagg\TokenParser\WithTokenParser', 'Twig_TokenParser_With');
+class_alias('TwigKagg\TokenParser\WithTokenParser', 'TwigKagg_TokenParser_With');

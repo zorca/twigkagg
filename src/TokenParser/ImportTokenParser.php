@@ -42,4 +42,4 @@ class ImportTokenParser extends AbstractTokenParser
     }
 }
 
-class_alias('TwigKagg\TokenParser\ImportTokenParser', 'Twig_TokenParser_Import');
+class_alias('TwigKagg\TokenParser\ImportTokenParser', 'TwigKagg_TokenParser_Import');

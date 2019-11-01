@@ -50,4 +50,4 @@ class ProfilerExtension extends AbstractExtension
     }
 }
 
-class_alias('TwigKagg\Extension\ProfilerExtension', 'Twig_Extension_Profiler');
+class_alias('TwigKagg\Extension\ProfilerExtension', 'TwigKagg_Extension_Profiler');

@@ -62,4 +62,4 @@ abstract class BaseDumper
     }
 }
 
-class_alias('TwigKagg\Profiler\Dumper\BaseDumper', 'Twig_Profiler_Dumper_Base');
+class_alias('TwigKagg\Profiler\Dumper\BaseDumper', 'TwigKagg_Profiler_Dumper_Base');

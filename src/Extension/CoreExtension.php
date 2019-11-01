@@ -302,7 +302,7 @@ class CoreExtension extends AbstractExtension
     }
 }
 
-class_alias('TwigKagg\Extension\CoreExtension', 'Twig_Extension_Core');
+class_alias('TwigKagg\Extension\CoreExtension', 'TwigKagg_Extension_Core');
 }
 
 namespace {

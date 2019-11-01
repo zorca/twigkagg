@@ -59,4 +59,4 @@ class FileExtensionEscapingStrategy
     }
 }
 
-class_alias('TwigKagg\FileExtensionEscapingStrategy', 'Twig_FileExtensionEscapingStrategy');
+class_alias('TwigKagg\FileExtensionEscapingStrategy', 'TwigKagg_FileExtensionEscapingStrategy');

@@ -41,4 +41,4 @@ class SetTempNode extends Node
     }
 }
 
-class_alias('TwigKagg\Node\SetTempNode', 'Twig_Node_SetTemp');
+class_alias('TwigKagg\Node\SetTempNode', 'TwigKagg_Node_SetTemp');

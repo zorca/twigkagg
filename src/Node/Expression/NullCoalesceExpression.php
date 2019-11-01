@@ -20,7 +20,7 @@ use TwigKagg\Node\Node;
 
 class NullCoalesceExpression extends ConditionalExpression
 {
-    public function __construct(\Twig_NodeInterface $left, \Twig_NodeInterface $right, $lineno)
+    public function __construct(\TwigKagg_NodeInterface $left, \TwigKagg_NodeInterface $right, $lineno)
     {
         $test = new AndBinary(
             new DefinedTest(clone $left, 'defined', new Node(), $left->getTemplateLine()),
@@ -55,4 +55,4 @@ class NullCoalesceExpression extends ConditionalExpression
     }
 }
 
-class_alias('TwigKagg\Node\Expression\NullCoalesceExpression', 'Twig_Node_Expression_NullCoalesce');
+class_alias('TwigKagg\Node\Expression\NullCoalesceExpression', 'TwigKagg_Node_Expression_NullCoalesce');

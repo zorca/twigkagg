@@ -54,4 +54,4 @@ class ImportNode extends Node
     }
 }
 
-class_alias('TwigKagg\Node\ImportNode', 'Twig_Node_Import');
+class_alias('TwigKagg\Node\ImportNode', 'TwigKagg_Node_Import');

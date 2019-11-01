@@ -112,7 +112,7 @@ class TwigFunction
     }
 }
 
-class_alias('TwigKagg\TwigFunction', 'Twig_SimpleFunction');
+class_alias('TwigKagg\TwigFunction', 'TwigKagg_SimpleFunction');
 
 // Ensure that the aliased name is loaded to keep BC for classes implementing the typehint with the old aliased name.
 class_exists('TwigKagg\Node\Node');

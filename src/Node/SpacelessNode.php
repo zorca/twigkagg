@@ -22,7 +22,7 @@ use TwigKagg\Compiler;
  */
 class SpacelessNode extends Node
 {
-    public function __construct(\Twig_NodeInterface $body, $lineno, $tag = 'spaceless')
+    public function __construct(\TwigKagg_NodeInterface $body, $lineno, $tag = 'spaceless')
     {
         parent::__construct(['body' => $body], [], $lineno, $tag);
     }
@@ -44,4 +44,4 @@ class SpacelessNode extends Node
     }
 }
 
-class_alias('TwigKagg\Node\SpacelessNode', 'Twig_Node_Spaceless');
+class_alias('TwigKagg\Node\SpacelessNode', 'TwigKagg_Node_Spaceless');

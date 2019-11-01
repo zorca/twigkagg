@@ -90,4 +90,4 @@ class FilesystemCache implements CacheInterface
     }
 }
 
-class_alias('TwigKagg\Cache\FilesystemCache', 'Twig_Cache_Filesystem');
+class_alias('TwigKagg\Cache\FilesystemCache', 'TwigKagg_Cache_Filesystem');

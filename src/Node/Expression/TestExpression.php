@@ -16,7 +16,7 @@ use TwigKagg\TwigTest;
 
 class TestExpression extends CallExpression
 {
-    public function __construct(\Twig_NodeInterface $node, $name, \Twig_NodeInterface $arguments = null, $lineno)
+    public function __construct(\TwigKagg_NodeInterface $node, $name, \TwigKagg_NodeInterface $arguments = null, $lineno)
     {
         $nodes = ['node' => $node];
         if (null !== $arguments) {
@@ -37,7 +37,7 @@ class TestExpression extends CallExpression
         if ($test instanceof TwigTest) {
             $this->setAttribute('arguments', $test->getArguments());
         }
-        if ($test instanceof \Twig_TestCallableInterface || $test instanceof TwigTest) {
+        if ($test instanceof \TwigKagg_TestCallableInterface || $test instanceof TwigTest) {
             $this->setAttribute('callable', $test->getCallable());
         }
         if ($test instanceof TwigTest) {
@@ -48,4 +48,4 @@ class TestExpression extends CallExpression
     }
 }
 
-class_alias('TwigKagg\Node\Expression\TestExpression', 'Twig_Node_Expression_Test');
+class_alias('TwigKagg\Node\Expression\TestExpression', 'TwigKagg_Node_Expression_Test');

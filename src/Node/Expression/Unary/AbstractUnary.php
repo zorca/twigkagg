@@ -17,7 +17,7 @@ use TwigKagg\Node\Expression\AbstractExpression;
 
 abstract class AbstractUnary extends AbstractExpression
 {
-    public function __construct(\Twig_NodeInterface $node, $lineno)
+    public function __construct(\TwigKagg_NodeInterface $node, $lineno)
     {
         parent::__construct(['node' => $node], [], $lineno);
     }
@@ -32,4 +32,4 @@ abstract class AbstractUnary extends AbstractExpression
     abstract public function operator(Compiler $compiler);
 }
 
-class_alias('TwigKagg\Node\Expression\Unary\AbstractUnary', 'Twig_Node_Expression_Unary');
+class_alias('TwigKagg\Node\Expression\Unary\AbstractUnary', 'TwigKagg_Node_Expression_Unary');

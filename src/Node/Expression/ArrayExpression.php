@@ -85,4 +85,4 @@ class ArrayExpression extends AbstractExpression
     }
 }
 
-class_alias('TwigKagg\Node\Expression\ArrayExpression', 'Twig_Node_Expression_Array');
+class_alias('TwigKagg\Node\Expression\ArrayExpression', 'TwigKagg_Node_Expression_Array');

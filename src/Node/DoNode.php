@@ -37,4 +37,4 @@ class DoNode extends Node
     }
 }
 
-class_alias('TwigKagg\Node\DoNode', 'Twig_Node_Do');
+class_alias('TwigKagg\Node\DoNode', 'TwigKagg_Node_Do');

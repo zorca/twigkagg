@@ -212,4 +212,4 @@ class Token
     }
 }
 
-class_alias('TwigKagg\Token', 'Twig_Token');
+class_alias('TwigKagg\Token', 'TwigKagg_Token');

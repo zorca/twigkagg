@@ -34,4 +34,4 @@ class FlushNode extends Node
     }
 }
 
-class_alias('TwigKagg\Node\FlushNode', 'Twig_Node_Flush');
+class_alias('TwigKagg\Node\FlushNode', 'TwigKagg_Node_Flush');

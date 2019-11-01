@@ -30,4 +30,4 @@ interface ExistsLoaderInterface
     public function exists($name);
 }
 
-class_alias('TwigKagg\Loader\ExistsLoaderInterface', 'Twig_ExistsLoaderInterface');
+class_alias('TwigKagg\Loader\ExistsLoaderInterface', 'TwigKagg_ExistsLoaderInterface');

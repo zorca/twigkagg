@@ -26,7 +26,7 @@ use TwigKagg\Compiler;
  */
 class AutoEscapeNode extends Node
 {
-    public function __construct($value, \Twig_NodeInterface $body, $lineno, $tag = 'autoescape')
+    public function __construct($value, \TwigKagg_NodeInterface $body, $lineno, $tag = 'autoescape')
     {
         parent::__construct(['body' => $body], ['value' => $value], $lineno, $tag);
     }
@@ -37,4 +37,4 @@ class AutoEscapeNode extends Node
     }
 }
 
-class_alias('TwigKagg\Node\AutoEscapeNode', 'Twig_Node_AutoEscape');
+class_alias('TwigKagg\Node\AutoEscapeNode', 'TwigKagg_Node_AutoEscape');

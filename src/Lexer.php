@@ -19,7 +19,7 @@ use TwigKagg\Error\SyntaxError;
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */
-class Lexer implements \Twig_LexerInterface
+class Lexer implements \TwigKagg_LexerInterface
 {
     protected $tokens;
     protected $code;
@@ -531,4 +531,4 @@ class Lexer implements \Twig_LexerInterface
     }
 }
 
-class_alias('TwigKagg\Lexer', 'Twig_Lexer');
+class_alias('TwigKagg\Lexer', 'TwigKagg_Lexer');

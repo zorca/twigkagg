@@ -71,4 +71,4 @@ class SetTokenParser extends AbstractTokenParser
     }
 }
 
-class_alias('TwigKagg\TokenParser\SetTokenParser', 'Twig_TokenParser_Set');
+class_alias('TwigKagg\TokenParser\SetTokenParser', 'TwigKagg_TokenParser_Set');

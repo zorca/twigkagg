@@ -22,4 +22,4 @@ class DivBinary extends AbstractBinary
     }
 }
 
-class_alias('TwigKagg\Node\Expression\Binary\DivBinary', 'Twig_Node_Expression_Binary_Div');
+class_alias('TwigKagg\Node\Expression\Binary\DivBinary', 'TwigKagg_Node_Expression_Binary_Div');

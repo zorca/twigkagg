@@ -21,7 +21,7 @@ use TwigKagg\Compiler;
  */
 class BlockNode extends Node
 {
-    public function __construct($name, \Twig_NodeInterface $body, $lineno, $tag = null)
+    public function __construct($name, \TwigKagg_NodeInterface $body, $lineno, $tag = null)
     {
         parent::__construct(['body' => $body], ['name' => $name], $lineno, $tag);
     }
@@ -42,4 +42,4 @@ class BlockNode extends Node
     }
 }
 
-class_alias('TwigKagg\Node\BlockNode', 'Twig_Node_Block');
+class_alias('TwigKagg\Node\BlockNode', 'TwigKagg_Node_Block');

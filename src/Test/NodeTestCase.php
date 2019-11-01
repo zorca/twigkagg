@@ -76,4 +76,4 @@ abstract class NodeTestCase extends TestCase
     }
 }
 
-class_alias('TwigKagg\Test\NodeTestCase', 'Twig_Test_NodeTestCase');
+class_alias('TwigKagg\Test\NodeTestCase', 'TwigKagg_Test_NodeTestCase');

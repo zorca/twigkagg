@@ -99,4 +99,4 @@ class ArrayLoader implements LoaderInterface, ExistsLoaderInterface, SourceConte
     }
 }
 
-class_alias('TwigKagg\Loader\ArrayLoader', 'Twig_Loader_Array');
+class_alias('TwigKagg\Loader\ArrayLoader', 'TwigKagg_Loader_Array');

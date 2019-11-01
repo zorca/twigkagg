@@ -21,4 +21,4 @@ class LessBinary extends AbstractBinary
     }
 }
 
-class_alias('TwigKagg\Node\Expression\Binary\LessBinary', 'Twig_Node_Expression_Binary_Less');
+class_alias('TwigKagg\Node\Expression\Binary\LessBinary', 'TwigKagg_Node_Expression_Binary_Less');

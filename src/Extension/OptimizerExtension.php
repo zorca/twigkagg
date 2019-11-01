@@ -36,4 +36,4 @@ class OptimizerExtension extends AbstractExtension
     }
 }
 
-class_alias('TwigKagg\Extension\OptimizerExtension', 'Twig_Extension_Optimizer');
+class_alias('TwigKagg\Extension\OptimizerExtension', 'TwigKagg_Extension_Optimizer');

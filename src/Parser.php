@@ -32,7 +32,7 @@ use TwigKagg\TokenParser\TokenParserInterface;
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */
-class Parser implements \Twig_ParserInterface
+class Parser implements \TwigKagg_ParserInterface
 {
     protected $stack = [];
     protected $stream;
@@ -398,7 +398,7 @@ class Parser implements \Twig_ParserInterface
         return $this->stream->getCurrent();
     }
 
-    protected function filterBodyNodes(\Twig_NodeInterface $node)
+    protected function filterBodyNodes(\TwigKagg_NodeInterface $node)
     {
         // check that the body does not contain non-empty output nodes
         if (
@@ -436,4 +436,4 @@ class Parser implements \Twig_ParserInterface
     }
 }
 
-class_alias('TwigKagg\Parser', 'Twig_Parser');
+class_alias('TwigKagg\Parser', 'TwigKagg_Parser');

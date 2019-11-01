@@ -38,4 +38,4 @@ class Markup implements \Countable
     }
 }
 
-class_alias('TwigKagg\Markup', 'Twig_Markup');
+class_alias('TwigKagg\Markup', 'TwigKagg_Markup');

@@ -106,4 +106,4 @@ class SandboxExtension extends AbstractExtension
     }
 }
 
-class_alias('TwigKagg\Extension\SandboxExtension', 'Twig_Extension_Sandbox');
+class_alias('TwigKagg\Extension\SandboxExtension', 'TwigKagg_Extension_Sandbox');

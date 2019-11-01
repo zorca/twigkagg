@@ -27,7 +27,7 @@ use TwigKagg\Error\RuntimeError;
  *
  * @internal
  */
-abstract class Template implements \Twig_TemplateInterface
+abstract class Template implements \TwigKagg_TemplateInterface
 {
     /**
      * @internal
@@ -113,7 +113,7 @@ abstract class Template implements \Twig_TemplateInterface
      *
      * @param array $context
      *
-     * @return \Twig_TemplateInterface|TemplateWrapper|false The parent template or false if there is no parent
+     * @return \TwigKagg_TemplateInterface|TemplateWrapper|false The parent template or false if there is no parent
      *
      * @internal
      */
@@ -711,7 +711,7 @@ abstract class Template implements \Twig_TemplateInterface
         }
 
         // @deprecated in 1.28
-        if ($object instanceof \Twig_TemplateInterface) {
+        if ($object instanceof \TwigKagg_TemplateInterface) {
             $self = $object->getTemplateName() === $this->getTemplateName();
             $message = sprintf('Calling "%s" on template "%s" from template "%s" is deprecated since version 1.28 and won\'t be supported anymore in 2.0.', $item, $object->getTemplateName(), $this->getTemplateName());
             if ('renderBlock' === $method || 'displayBlock' === $method) {
@@ -730,4 +730,4 @@ abstract class Template implements \Twig_TemplateInterface
     }
 }
 
-class_alias('TwigKagg\Template', 'Twig_Template');
+class_alias('TwigKagg\Template', 'TwigKagg_Template');

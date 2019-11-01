@@ -30,4 +30,4 @@ class TempNameExpression extends AbstractExpression
     }
 }
 
-class_alias('TwigKagg\Node\Expression\TempNameExpression', 'Twig_Node_Expression_TempName');
+class_alias('TwigKagg\Node\Expression\TempNameExpression', 'TwigKagg_Node_Expression_TempName');

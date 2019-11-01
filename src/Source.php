@@ -52,4 +52,4 @@ class Source
     }
 }
 
-class_alias('TwigKagg\Source', 'Twig_Source');
+class_alias('TwigKagg\Source', 'TwigKagg_Source');

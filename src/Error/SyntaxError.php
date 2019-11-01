@@ -54,4 +54,4 @@ class SyntaxError extends Error
     }
 }
 
-class_alias('TwigKagg\Error\SyntaxError', 'Twig_Error_Syntax');
+class_alias('TwigKagg\Error\SyntaxError', 'TwigKagg_Error_Syntax');

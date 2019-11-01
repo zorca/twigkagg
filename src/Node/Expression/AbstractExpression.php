@@ -23,4 +23,4 @@ abstract class AbstractExpression extends Node
 {
 }
 
-class_alias('TwigKagg\Node\Expression\AbstractExpression', 'Twig_Node_Expression');
+class_alias('TwigKagg\Node\Expression\AbstractExpression', 'TwigKagg_Node_Expression');

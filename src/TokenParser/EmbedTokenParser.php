@@ -71,4 +71,4 @@ class EmbedTokenParser extends IncludeTokenParser
     }
 }
 
-class_alias('TwigKagg\TokenParser\EmbedTokenParser', 'Twig_TokenParser_Embed');
+class_alias('TwigKagg\TokenParser\EmbedTokenParser', 'TwigKagg_TokenParser_Embed');

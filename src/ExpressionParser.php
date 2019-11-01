@@ -269,9 +269,9 @@ class ExpressionParser
                     $ref = new \ReflectionClass($class);
                     $negClass = 'TwigKagg\Node\Expression\Unary\NegUnary';
                     $posClass = 'TwigKagg\Node\Expression\Unary\PosUnary';
-                    if (!(\in_array($ref->getName(), [$negClass, $posClass, 'Twig_Node_Expression_Unary_Neg', 'Twig_Node_Expression_Unary_Pos'])
+                    if (!(\in_array($ref->getName(), [$negClass, $posClass, 'TwigKagg_Node_Expression_Unary_Neg', 'TwigKagg_Node_Expression_Unary_Pos'])
                         || $ref->isSubclassOf($negClass) || $ref->isSubclassOf($posClass)
-                        || $ref->isSubclassOf('Twig_Node_Expression_Unary_Neg') || $ref->isSubclassOf('Twig_Node_Expression_Unary_Pos'))
+                        || $ref->isSubclassOf('TwigKagg_Node_Expression_Unary_Neg') || $ref->isSubclassOf('TwigKagg_Node_Expression_Unary_Pos'))
                     ) {
                         throw new SyntaxError(sprintf('Unexpected unary operator "%s".', $token->getValue()), $token->getLine(), $this->parser->getStream()->getSourceContext());
                     }
@@ -683,12 +683,12 @@ class ExpressionParser
         return new Node($targets);
     }
 
-    private function parseNotTestExpression(\Twig_NodeInterface $node)
+    private function parseNotTestExpression(\TwigKagg_NodeInterface $node)
     {
         return new NotUnary($this->parseTestExpression($node), $this->parser->getCurrentToken()->getLine());
     }
 
-    private function parseTestExpression(\Twig_NodeInterface $node)
+    private function parseTestExpression(\TwigKagg_NodeInterface $node)
     {
         $stream = $this->parser->getStream();
         list($name, $test) = $this->getTest($node->getTemplateLine());
@@ -749,7 +749,7 @@ class ExpressionParser
             return $test->getNodeClass();
         }
 
-        return $test instanceof \Twig_Test_Node ? $test->getClass() : 'TwigKagg\Node\Expression\TestExpression';
+        return $test instanceof \TwigKagg_Test_Node ? $test->getClass() : 'TwigKagg\Node\Expression\TestExpression';
     }
 
     protected function getFunctionNodeClass($name, $line)
@@ -779,7 +779,7 @@ class ExpressionParser
             return $function->getNodeClass();
         }
 
-        return $function instanceof \Twig_Function_Node ? $function->getClass() : 'TwigKagg\Node\Expression\FunctionExpression';
+        return $function instanceof \TwigKagg_Function_Node ? $function->getClass() : 'TwigKagg\Node\Expression\FunctionExpression';
     }
 
     protected function getFilterNodeClass($name, $line)
@@ -809,11 +809,11 @@ class ExpressionParser
             return $filter->getNodeClass();
         }
 
-        return $filter instanceof \Twig_Filter_Node ? $filter->getClass() : 'TwigKagg\Node\Expression\FilterExpression';
+        return $filter instanceof \TwigKagg_Filter_Node ? $filter->getClass() : 'TwigKagg\Node\Expression\FilterExpression';
     }
 
     // checks that the node only contains "constant" elements
-    protected function checkConstantExpression(\Twig_NodeInterface $node)
+    protected function checkConstantExpression(\TwigKagg_NodeInterface $node)
     {
         if (!($node instanceof ConstantExpression || $node instanceof ArrayExpression
             || $node instanceof NegUnary || $node instanceof PosUnary
@@ -831,4 +831,4 @@ class ExpressionParser
     }
 }
 
-class_alias('TwigKagg\ExpressionParser', 'Twig_ExpressionParser');
+class_alias('TwigKagg\ExpressionParser', 'TwigKagg_ExpressionParser');

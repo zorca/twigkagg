@@ -26,7 +26,7 @@ class DeprecationCollectorTest extends \PHPUnit\Framework\TestCase
         $twig->addFunction(new TwigFunction('deprec', [$this, 'deprec'], ['deprecated' => true]));
 
         $collector = new DeprecationCollector($twig);
-        $deprecations = $collector->collect(new Twig_Tests_Util_Iterator());
+        $deprecations = $collector->collect(new TwigKagg_Tests_Util_Iterator());
 
         $this->assertEquals(['Twig Function "deprec" is deprecated in deprec.twig at line 1.'], $deprecations);
     }
@@ -36,7 +36,7 @@ class DeprecationCollectorTest extends \PHPUnit\Framework\TestCase
     }
 }
 
-class Twig_Tests_Util_Iterator implements \IteratorAggregate
+class TwigKagg_Tests_Util_Iterator implements \IteratorAggregate
 {
     public function getIterator()
     {

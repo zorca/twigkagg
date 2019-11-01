@@ -32,4 +32,4 @@ class SecurityNotAllowedFilterError extends SecurityError
     }
 }
 
-class_alias('TwigKagg\Sandbox\SecurityNotAllowedFilterError', 'Twig_Sandbox_SecurityNotAllowedFilterError');
+class_alias('TwigKagg\Sandbox\SecurityNotAllowedFilterError', 'TwigKagg_Sandbox_SecurityNotAllowedFilterError');

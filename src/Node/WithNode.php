@@ -69,4 +69,4 @@ class WithNode extends Node
     }
 }
 
-class_alias('TwigKagg\Node\WithNode', 'Twig_Node_With');
+class_alias('TwigKagg\Node\WithNode', 'TwigKagg_Node_With');

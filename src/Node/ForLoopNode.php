@@ -53,4 +53,4 @@ class ForLoopNode extends Node
     }
 }
 
-class_alias('TwigKagg\Node\ForLoopNode', 'Twig_Node_ForLoop');
+class_alias('TwigKagg\Node\ForLoopNode', 'TwigKagg_Node_ForLoop');

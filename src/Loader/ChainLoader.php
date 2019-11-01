@@ -161,4 +161,4 @@ class ChainLoader implements LoaderInterface, ExistsLoaderInterface, SourceConte
     }
 }
 
-class_alias('TwigKagg\Loader\ChainLoader', 'Twig_Loader_Chain');
+class_alias('TwigKagg\Loader\ChainLoader', 'TwigKagg_Loader_Chain');

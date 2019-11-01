@@ -432,7 +432,7 @@ class Environment
      * @param string $name  The template name
      * @param int    $index The index if it is an embedded template
      *
-     * @return \Twig_TemplateInterface A template instance representing the given template name
+     * @return \TwigKagg_TemplateInterface A template instance representing the given template name
      *
      * @throws LoaderError  When the template cannot be found
      * @throws RuntimeError When a previously generated cache is corrupted
@@ -652,7 +652,7 @@ class Environment
     /**
      * Gets the Lexer instance.
      *
-     * @return \Twig_LexerInterface
+     * @return \TwigKagg_LexerInterface
      *
      * @deprecated since 1.25 (to be removed in 2.0)
      */
@@ -667,7 +667,7 @@ class Environment
         return $this->lexer;
     }
 
-    public function setLexer(\Twig_LexerInterface $lexer)
+    public function setLexer(\TwigKagg_LexerInterface $lexer)
     {
         $this->lexer = $lexer;
     }
@@ -699,7 +699,7 @@ class Environment
     /**
      * Gets the Parser instance.
      *
-     * @return \Twig_ParserInterface
+     * @return \TwigKagg_ParserInterface
      *
      * @deprecated since 1.25 (to be removed in 2.0)
      */
@@ -714,7 +714,7 @@ class Environment
         return $this->parser;
     }
 
-    public function setParser(\Twig_ParserInterface $parser)
+    public function setParser(\TwigKagg_ParserInterface $parser)
     {
         $this->parser = $parser;
     }
@@ -738,7 +738,7 @@ class Environment
     /**
      * Gets the Compiler instance.
      *
-     * @return \Twig_CompilerInterface
+     * @return \TwigKagg_CompilerInterface
      *
      * @deprecated since 1.25 (to be removed in 2.0)
      */
@@ -753,7 +753,7 @@ class Environment
         return $this->compiler;
     }
 
-    public function setCompiler(\Twig_CompilerInterface $compiler)
+    public function setCompiler(\TwigKagg_CompilerInterface $compiler)
     {
         $this->compiler = $compiler;
     }
@@ -763,7 +763,7 @@ class Environment
      *
      * @return string The compiled PHP source code
      */
-    public function compile(\Twig_NodeInterface $node)
+    public function compile(\TwigKagg_NodeInterface $node)
     {
         if (null === $this->compiler) {
             $this->compiler = new Compiler($this);
@@ -856,8 +856,8 @@ class Environment
                 $m = new \ReflectionMethod($extension, 'initRuntime');
 
                 $parentClass = $m->getDeclaringClass()->getName();
-                if ('Twig_Extension' !== $parentClass && 'TwigKagg\Extension\AbstractExtension' !== $parentClass) {
-                    @trigger_error(sprintf('Defining the initRuntime() method in the "%s" extension is deprecated since version 1.23. Use the `needs_environment` option to get the \Twig_Environment instance in filters, functions, or tests; or explicitly implement TwigKagg\Extension\InitRuntimeInterface if needed (not recommended).', $name), E_USER_DEPRECATED);
+                if ('TwigKagg_Extension' !== $parentClass && 'TwigKagg\Extension\AbstractExtension' !== $parentClass) {
+                    @trigger_error(sprintf('Defining the initRuntime() method in the "%s" extension is deprecated since version 1.23. Use the `needs_environment` option to get the \TwigKagg_Environment instance in filters, functions, or tests; or explicitly implement TwigKagg\Extension\InitRuntimeInterface if needed (not recommended).', $name), E_USER_DEPRECATED);
                 }
             }
 
@@ -1045,7 +1045,7 @@ class Environment
     /**
      * Gets the registered Token Parsers.
      *
-     * @return \Twig_TokenParserBrokerInterface
+     * @return \TwigKagg_TokenParserBrokerInterface
      *
      * @internal
      */
@@ -1061,7 +1061,7 @@ class Environment
     /**
      * Gets registered tags.
      *
-     * Be warned that this method cannot return tags defined by \Twig_TokenParserBrokerInterface classes.
+     * Be warned that this method cannot return tags defined by \TwigKagg_TokenParserBrokerInterface classes.
      *
      * @return TokenParserInterface[]
      *
@@ -1107,20 +1107,20 @@ class Environment
     /**
      * Registers a Filter.
      *
-     * @param string|TwigFilter                $name   The filter name or a \Twig_SimpleFilter instance
-     * @param \Twig_FilterInterface|TwigFilter $filter
+     * @param string|TwigFilter                $name   The filter name or a \TwigKagg_SimpleFilter instance
+     * @param \TwigKagg_FilterInterface|TwigFilter $filter
      */
     public function addFilter($name, $filter = null)
     {
-        if (!$name instanceof TwigFilter && !($filter instanceof TwigFilter || $filter instanceof \Twig_FilterInterface)) {
-            throw new \LogicException('A filter must be an instance of \Twig_FilterInterface or \Twig_SimpleFilter.');
+        if (!$name instanceof TwigFilter && !($filter instanceof TwigFilter || $filter instanceof \TwigKagg_FilterInterface)) {
+            throw new \LogicException('A filter must be an instance of \TwigKagg_FilterInterface or \TwigKagg_SimpleFilter.');
         }
 
         if ($name instanceof TwigFilter) {
             $filter = $name;
             $name = $filter->getName();
         } else {
-            @trigger_error(sprintf('Passing a name as a first argument to the %s method is deprecated since version 1.21. Pass an instance of "Twig_SimpleFilter" instead when defining filter "%s".', __METHOD__, $name), E_USER_DEPRECATED);
+            @trigger_error(sprintf('Passing a name as a first argument to the %s method is deprecated since version 1.21. Pass an instance of "TwigKagg_SimpleFilter" instead when defining filter "%s".', __METHOD__, $name), E_USER_DEPRECATED);
         }
 
         if ($this->extensionInitialized) {
@@ -1138,7 +1138,7 @@ class Environment
      *
      * @param string $name The filter name
      *
-     * @return \Twig_Filter|false
+     * @return \TwigKagg_Filter|false
      *
      * @internal
      */
@@ -1184,7 +1184,7 @@ class Environment
      *
      * Be warned that this method cannot return filters defined with registerUndefinedFilterCallback.
      *
-     * @return \Twig_FilterInterface[]
+     * @return \TwigKagg_FilterInterface[]
      *
      * @see registerUndefinedFilterCallback
      *
@@ -1202,20 +1202,20 @@ class Environment
     /**
      * Registers a Test.
      *
-     * @param string|TwigTest              $name The test name or a \Twig_SimpleTest instance
-     * @param \Twig_TestInterface|TwigTest $test A \Twig_TestInterface instance or a \Twig_SimpleTest instance
+     * @param string|TwigTest              $name The test name or a \TwigKagg_SimpleTest instance
+     * @param \TwigKagg_TestInterface|TwigTest $test A \TwigKagg_TestInterface instance or a \TwigKagg_SimpleTest instance
      */
     public function addTest($name, $test = null)
     {
-        if (!$name instanceof TwigTest && !($test instanceof TwigTest || $test instanceof \Twig_TestInterface)) {
-            throw new \LogicException('A test must be an instance of \Twig_TestInterface or \Twig_SimpleTest.');
+        if (!$name instanceof TwigTest && !($test instanceof TwigTest || $test instanceof \TwigKagg_TestInterface)) {
+            throw new \LogicException('A test must be an instance of \TwigKagg_TestInterface or \TwigKagg_SimpleTest.');
         }
 
         if ($name instanceof TwigTest) {
             $test = $name;
             $name = $test->getName();
         } else {
-            @trigger_error(sprintf('Passing a name as a first argument to the %s method is deprecated since version 1.21. Pass an instance of "Twig_SimpleTest" instead when defining test "%s".', __METHOD__, $name), E_USER_DEPRECATED);
+            @trigger_error(sprintf('Passing a name as a first argument to the %s method is deprecated since version 1.21. Pass an instance of "TwigKagg_SimpleTest" instead when defining test "%s".', __METHOD__, $name), E_USER_DEPRECATED);
         }
 
         if ($this->extensionInitialized) {
@@ -1228,7 +1228,7 @@ class Environment
     /**
      * Gets the registered Tests.
      *
-     * @return \Twig_TestInterface[]
+     * @return \TwigKagg_TestInterface[]
      *
      * @internal
      */
@@ -1246,7 +1246,7 @@ class Environment
      *
      * @param string $name The test name
      *
-     * @return \Twig_Test|false
+     * @return \TwigKagg_Test|false
      *
      * @internal
      */
@@ -1279,20 +1279,20 @@ class Environment
     /**
      * Registers a Function.
      *
-     * @param string|TwigFunction                  $name     The function name or a \Twig_SimpleFunction instance
-     * @param \Twig_FunctionInterface|TwigFunction $function
+     * @param string|TwigFunction                  $name     The function name or a \TwigKagg_SimpleFunction instance
+     * @param \TwigKagg_FunctionInterface|TwigFunction $function
      */
     public function addFunction($name, $function = null)
     {
-        if (!$name instanceof TwigFunction && !($function instanceof TwigFunction || $function instanceof \Twig_FunctionInterface)) {
-            throw new \LogicException('A function must be an instance of \Twig_FunctionInterface or \Twig_SimpleFunction.');
+        if (!$name instanceof TwigFunction && !($function instanceof TwigFunction || $function instanceof \TwigKagg_FunctionInterface)) {
+            throw new \LogicException('A function must be an instance of \TwigKagg_FunctionInterface or \TwigKagg_SimpleFunction.');
         }
 
         if ($name instanceof TwigFunction) {
             $function = $name;
             $name = $function->getName();
         } else {
-            @trigger_error(sprintf('Passing a name as a first argument to the %s method is deprecated since version 1.21. Pass an instance of "Twig_SimpleFunction" instead when defining function "%s".', __METHOD__, $name), E_USER_DEPRECATED);
+            @trigger_error(sprintf('Passing a name as a first argument to the %s method is deprecated since version 1.21. Pass an instance of "TwigKagg_SimpleFunction" instead when defining function "%s".', __METHOD__, $name), E_USER_DEPRECATED);
         }
 
         if ($this->extensionInitialized) {
@@ -1310,7 +1310,7 @@ class Environment
      *
      * @param string $name function name
      *
-     * @return \Twig_Function|false
+     * @return \TwigKagg_Function|false
      *
      * @internal
      */
@@ -1356,7 +1356,7 @@ class Environment
      *
      * Be warned that this method cannot return functions defined with registerUndefinedFunctionCallback.
      *
-     * @return \Twig_FunctionInterface[]
+     * @return \TwigKagg_FunctionInterface[]
      *
      * @see registerUndefinedFunctionCallback
      *
@@ -1495,7 +1495,7 @@ class Environment
                 $m = new \ReflectionMethod($extension, 'getGlobals');
 
                 $parentClass = $m->getDeclaringClass()->getName();
-                if ('Twig_Extension' !== $parentClass && 'TwigKagg\Extension\AbstractExtension' !== $parentClass) {
+                if ('TwigKagg_Extension' !== $parentClass && 'TwigKagg\Extension\AbstractExtension' !== $parentClass) {
                     @trigger_error(sprintf('Defining the getGlobals() method in the "%s" extension without explicitly implementing TwigKagg\Extension\GlobalsInterface is deprecated since version 1.23.', $name), E_USER_DEPRECATED);
                 }
             }
@@ -1522,7 +1522,7 @@ class Environment
             return;
         }
 
-        $this->parsers = new \Twig_TokenParserBroker([], [], false);
+        $this->parsers = new \TwigKagg_TokenParserBroker([], [], false);
         $this->filters = [];
         $this->functions = [];
         $this->tests = [];
@@ -1548,7 +1548,7 @@ class Environment
             if ($filter instanceof TwigFilter) {
                 $name = $filter->getName();
             } else {
-                @trigger_error(sprintf('Using an instance of "%s" for filter "%s" is deprecated since version 1.21. Use \Twig_SimpleFilter instead.', \get_class($filter), $name), E_USER_DEPRECATED);
+                @trigger_error(sprintf('Using an instance of "%s" for filter "%s" is deprecated since version 1.21. Use \TwigKagg_SimpleFilter instead.', \get_class($filter), $name), E_USER_DEPRECATED);
             }
 
             $this->filters[$name] = $filter;
@@ -1559,7 +1559,7 @@ class Environment
             if ($function instanceof TwigFunction) {
                 $name = $function->getName();
             } else {
-                @trigger_error(sprintf('Using an instance of "%s" for function "%s" is deprecated since version 1.21. Use \Twig_SimpleFunction instead.', \get_class($function), $name), E_USER_DEPRECATED);
+                @trigger_error(sprintf('Using an instance of "%s" for function "%s" is deprecated since version 1.21. Use \TwigKagg_SimpleFunction instead.', \get_class($function), $name), E_USER_DEPRECATED);
             }
 
             $this->functions[$name] = $function;
@@ -1570,7 +1570,7 @@ class Environment
             if ($test instanceof TwigTest) {
                 $name = $test->getName();
             } else {
-                @trigger_error(sprintf('Using an instance of "%s" for test "%s" is deprecated since version 1.21. Use \Twig_SimpleTest instead.', \get_class($test), $name), E_USER_DEPRECATED);
+                @trigger_error(sprintf('Using an instance of "%s" for test "%s" is deprecated since version 1.21. Use \TwigKagg_SimpleTest instead.', \get_class($test), $name), E_USER_DEPRECATED);
             }
 
             $this->tests[$name] = $test;
@@ -1580,12 +1580,12 @@ class Environment
         foreach ($extension->getTokenParsers() as $parser) {
             if ($parser instanceof TokenParserInterface) {
                 $this->parsers->addTokenParser($parser);
-            } elseif ($parser instanceof \Twig_TokenParserBrokerInterface) {
-                @trigger_error('Registering a \Twig_TokenParserBrokerInterface instance is deprecated since version 1.21.', E_USER_DEPRECATED);
+            } elseif ($parser instanceof \TwigKagg_TokenParserBrokerInterface) {
+                @trigger_error('Registering a \TwigKagg_TokenParserBrokerInterface instance is deprecated since version 1.21.', E_USER_DEPRECATED);
 
                 $this->parsers->addTokenParserBroker($parser);
             } else {
-                throw new \LogicException('getTokenParsers() must return an array of \Twig_TokenParserInterface or \Twig_TokenParserBrokerInterface instances.');
+                throw new \LogicException('getTokenParsers() must return an array of \TwigKagg_TokenParserInterface or \TwigKagg_TokenParserBrokerInterface instances.');
             }
         }
 
@@ -1635,4 +1635,4 @@ class Environment
     }
 }
 
-class_alias('TwigKagg\Environment', 'Twig_Environment');
+class_alias('TwigKagg\Environment', 'TwigKagg_Environment');

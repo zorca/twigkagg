@@ -22,4 +22,4 @@ class AddBinary extends AbstractBinary
     }
 }
 
-class_alias('TwigKagg\Node\Expression\Binary\AddBinary', 'Twig_Node_Expression_Binary_Add');
+class_alias('TwigKagg\Node\Expression\Binary\AddBinary', 'TwigKagg_Node_Expression_Binary_Add');

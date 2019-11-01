@@ -105,4 +105,4 @@ class IncludeNode extends Node implements NodeOutputInterface
     }
 }
 
-class_alias('TwigKagg\Node\IncludeNode', 'Twig_Node_Include');
+class_alias('TwigKagg\Node\IncludeNode', 'TwigKagg_Node_Include');

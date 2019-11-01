@@ -58,4 +58,4 @@ interface LoaderInterface
     public function isFresh($name, $time);
 }
 
-class_alias('TwigKagg\Loader\LoaderInterface', 'Twig_LoaderInterface');
+class_alias('TwigKagg\Loader\LoaderInterface', 'TwigKagg_LoaderInterface');

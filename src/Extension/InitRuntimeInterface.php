@@ -23,4 +23,4 @@ interface InitRuntimeInterface
 {
 }
 
-class_alias('TwigKagg\Extension\InitRuntimeInterface', 'Twig_Extension_InitRuntimeInterface');
+class_alias('TwigKagg\Extension\InitRuntimeInterface', 'TwigKagg_Extension_InitRuntimeInterface');

@@ -21,7 +21,7 @@ use TwigKagg\Node\Expression\ConstantExpression;
  */
 class SetNode extends Node implements NodeCaptureInterface
 {
-    public function __construct($capture, \Twig_NodeInterface $names, \Twig_NodeInterface $values, $lineno, $tag = null)
+    public function __construct($capture, \TwigKagg_NodeInterface $names, \TwigKagg_NodeInterface $values, $lineno, $tag = null)
     {
         parent::__construct(['names' => $names, 'values' => $values], ['capture' => $capture, 'safe' => false], $lineno, $tag);
 
@@ -104,4 +104,4 @@ class SetNode extends Node implements NodeCaptureInterface
     }
 }
 
-class_alias('TwigKagg\Node\SetNode', 'Twig_Node_Set');
+class_alias('TwigKagg\Node\SetNode', 'TwigKagg_Node_Set');

@@ -19,7 +19,7 @@ use TwigKagg\Node\ModuleNode;
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */
-class Compiler implements \Twig_CompilerInterface
+class Compiler implements \TwigKagg_CompilerInterface
 {
     protected $lastLine;
     protected $source;
@@ -73,7 +73,7 @@ class Compiler implements \Twig_CompilerInterface
      *
      * @return $this
      */
-    public function compile(\Twig_NodeInterface $node, $indentation = 0)
+    public function compile(\TwigKagg_NodeInterface $node, $indentation = 0)
     {
         $this->lastLine = null;
         $this->source = '';
@@ -94,7 +94,7 @@ class Compiler implements \Twig_CompilerInterface
         return $this;
     }
 
-    public function subcompile(\Twig_NodeInterface $node, $raw = true)
+    public function subcompile(\TwigKagg_NodeInterface $node, $raw = true)
     {
         if (false === $raw) {
             $this->source .= str_repeat(' ', $this->indentation * 4);
@@ -212,7 +212,7 @@ class Compiler implements \Twig_CompilerInterface
      *
      * @return $this
      */
-    public function addDebugInfo(\Twig_NodeInterface $node)
+    public function addDebugInfo(\TwigKagg_NodeInterface $node)
     {
         if ($node->getTemplateLine() != $this->lastLine) {
             $this->write(sprintf("// line %d\n", $node->getTemplateLine()));
@@ -285,4 +285,4 @@ class Compiler implements \Twig_CompilerInterface
     }
 }
 
-class_alias('TwigKagg\Compiler', 'Twig_Compiler');
+class_alias('TwigKagg\Compiler', 'TwigKagg_Compiler');

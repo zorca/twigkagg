@@ -254,4 +254,4 @@ abstract class IntegrationTestCase extends TestCase
     }
 }
 
-class_alias('TwigKagg\Test\IntegrationTestCase', 'Twig_Test_IntegrationTestCase');
+class_alias('TwigKagg\Test\IntegrationTestCase', 'TwigKagg_Test_IntegrationTestCase');

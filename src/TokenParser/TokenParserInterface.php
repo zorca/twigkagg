@@ -30,7 +30,7 @@ interface TokenParserInterface
     /**
      * Parses a token and returns a node.
      *
-     * @return \Twig_NodeInterface
+     * @return \TwigKagg_NodeInterface
      *
      * @throws SyntaxError
      */
@@ -44,7 +44,7 @@ interface TokenParserInterface
     public function getTag();
 }
 
-class_alias('TwigKagg\TokenParser\TokenParserInterface', 'Twig_TokenParserInterface');
+class_alias('TwigKagg\TokenParser\TokenParserInterface', 'TwigKagg_TokenParserInterface');
 
 // Ensure that the aliased name is loaded to keep BC for classes implementing the typehint with the old aliased name.
 class_exists('TwigKagg\Token');

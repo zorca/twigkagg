@@ -39,4 +39,4 @@ class SecurityNotAllowedMethodError extends SecurityError
     }
 }
 
-class_alias('TwigKagg\Sandbox\SecurityNotAllowedMethodError', 'Twig_Sandbox_SecurityNotAllowedMethodError');
+class_alias('TwigKagg\Sandbox\SecurityNotAllowedMethodError', 'TwigKagg_Sandbox_SecurityNotAllowedMethodError');

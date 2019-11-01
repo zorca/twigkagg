@@ -29,7 +29,7 @@ use TwigKagg\Node\Node;
  */
 class DefaultFilter extends FilterExpression
 {
-    public function __construct(\Twig_NodeInterface $node, ConstantExpression $filterName, \Twig_NodeInterface $arguments, $lineno, $tag = null)
+    public function __construct(\TwigKagg_NodeInterface $node, ConstantExpression $filterName, \TwigKagg_NodeInterface $arguments, $lineno, $tag = null)
     {
         $default = new FilterExpression($node, new ConstantExpression('default', $node->getTemplateLine()), $arguments, $node->getTemplateLine());
 
@@ -51,4 +51,4 @@ class DefaultFilter extends FilterExpression
     }
 }
 
-class_alias('TwigKagg\Node\Expression\Filter\DefaultFilter', 'Twig_Node_Expression_Filter_Default');
+class_alias('TwigKagg\Node\Expression\Filter\DefaultFilter', 'TwigKagg_Node_Expression_Filter_Default');

@@ -32,4 +32,4 @@ class SecurityNotAllowedTagError extends SecurityError
     }
 }
 
-class_alias('TwigKagg\Sandbox\SecurityNotAllowedTagError', 'Twig_Sandbox_SecurityNotAllowedTagError');
+class_alias('TwigKagg\Sandbox\SecurityNotAllowedTagError', 'TwigKagg_Sandbox_SecurityNotAllowedTagError');

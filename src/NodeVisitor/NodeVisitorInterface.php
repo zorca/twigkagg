@@ -23,16 +23,16 @@ interface NodeVisitorInterface
     /**
      * Called before child nodes are visited.
      *
-     * @return \Twig_NodeInterface The modified node
+     * @return \TwigKagg_NodeInterface The modified node
      */
-    public function enterNode(\Twig_NodeInterface $node, Environment $env);
+    public function enterNode(\TwigKagg_NodeInterface $node, Environment $env);
 
     /**
      * Called after child nodes are visited.
      *
-     * @return \Twig_NodeInterface|false|null The modified node or null if the node must be removed
+     * @return \TwigKagg_NodeInterface|false|null The modified node or null if the node must be removed
      */
-    public function leaveNode(\Twig_NodeInterface $node, Environment $env);
+    public function leaveNode(\TwigKagg_NodeInterface $node, Environment $env);
 
     /**
      * Returns the priority for this visitor.
@@ -44,7 +44,7 @@ interface NodeVisitorInterface
     public function getPriority();
 }
 
-class_alias('TwigKagg\NodeVisitor\NodeVisitorInterface', 'Twig_NodeVisitorInterface');
+class_alias('TwigKagg\NodeVisitor\NodeVisitorInterface', 'TwigKagg_NodeVisitorInterface');
 
 // Ensure that the aliased name is loaded to keep BC for classes implementing the typehint with the old aliased name.
 class_exists('TwigKagg\Environment');

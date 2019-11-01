@@ -22,4 +22,4 @@ class ModBinary extends AbstractBinary
     }
 }
 
-class_alias('TwigKagg\Node\Expression\Binary\ModBinary', 'Twig_Node_Expression_Binary_Mod');
+class_alias('TwigKagg\Node\Expression\Binary\ModBinary', 'TwigKagg_Node_Expression_Binary_Mod');

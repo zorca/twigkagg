@@ -89,4 +89,4 @@ class DeprecationCollector
     }
 }
 
-class_alias('TwigKagg\Util\DeprecationCollector', 'Twig_Util_DeprecationCollector');
+class_alias('TwigKagg\Util\DeprecationCollector', 'TwigKagg_Util_DeprecationCollector');

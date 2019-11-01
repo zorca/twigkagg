@@ -36,4 +36,4 @@ class DoTokenParser extends AbstractTokenParser
     }
 }
 
-class_alias('TwigKagg\TokenParser\DoTokenParser', 'Twig_TokenParser_Do');
+class_alias('TwigKagg\TokenParser\DoTokenParser', 'TwigKagg_TokenParser_Do');

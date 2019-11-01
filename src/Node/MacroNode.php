@@ -23,7 +23,7 @@ class MacroNode extends Node
 {
     const VARARGS_NAME = 'varargs';
 
-    public function __construct($name, \Twig_NodeInterface $body, \Twig_NodeInterface $arguments, $lineno, $tag = null)
+    public function __construct($name, \TwigKagg_NodeInterface $body, \TwigKagg_NodeInterface $arguments, $lineno, $tag = null)
     {
         foreach ($arguments as $argumentName => $argument) {
             if (self::VARARGS_NAME === $argumentName) {
@@ -133,4 +133,4 @@ class MacroNode extends Node
     }
 }
 
-class_alias('TwigKagg\Node\MacroNode', 'Twig_Node_Macro');
+class_alias('TwigKagg\Node\MacroNode', 'TwigKagg_Node_Macro');

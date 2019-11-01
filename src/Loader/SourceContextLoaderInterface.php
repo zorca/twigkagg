@@ -35,4 +35,4 @@ interface SourceContextLoaderInterface
     public function getSourceContext($name);
 }
 
-class_alias('TwigKagg\Loader\SourceContextLoaderInterface', 'Twig_SourceContextLoaderInterface');
+class_alias('TwigKagg\Loader\SourceContextLoaderInterface', 'TwigKagg_SourceContextLoaderInterface');

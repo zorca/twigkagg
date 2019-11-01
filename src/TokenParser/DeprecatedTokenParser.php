@@ -41,4 +41,4 @@ class DeprecatedTokenParser extends AbstractTokenParser
     }
 }
 
-class_alias('TwigKagg\TokenParser\DeprecatedTokenParser', 'Twig_TokenParser_Deprecated');
+class_alias('TwigKagg\TokenParser\DeprecatedTokenParser', 'TwigKagg_TokenParser_Deprecated');

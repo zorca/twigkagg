@@ -21,4 +21,4 @@ class LessEqualBinary extends AbstractBinary
     }
 }
 
-class_alias('TwigKagg\Node\Expression\Binary\LessEqualBinary', 'Twig_Node_Expression_Binary_LessEqual');
+class_alias('TwigKagg\Node\Expression\Binary\LessEqualBinary', 'TwigKagg_Node_Expression_Binary_LessEqual');

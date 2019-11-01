@@ -30,7 +30,7 @@ class StringLoaderExtension extends AbstractExtension
     }
 }
 
-class_alias('TwigKagg\Extension\StringLoaderExtension', 'Twig_Extension_StringLoader');
+class_alias('TwigKagg\Extension\StringLoaderExtension', 'TwigKagg_Extension_StringLoader');
 }
 
 namespace {

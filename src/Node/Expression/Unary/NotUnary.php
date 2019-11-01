@@ -22,4 +22,4 @@ class NotUnary extends AbstractUnary
     }
 }
 
-class_alias('TwigKagg\Node\Expression\Unary\NotUnary', 'Twig_Node_Expression_Unary_Not');
+class_alias('TwigKagg\Node\Expression\Unary\NotUnary', 'TwigKagg_Node_Expression_Unary_Not');

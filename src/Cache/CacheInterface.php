@@ -57,4 +57,4 @@ interface CacheInterface
     public function getTimestamp($key);
 }
 
-class_alias('TwigKagg\Cache\CacheInterface', 'Twig_CacheInterface');
+class_alias('TwigKagg\Cache\CacheInterface', 'TwigKagg_CacheInterface');

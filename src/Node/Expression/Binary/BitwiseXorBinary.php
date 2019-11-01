@@ -22,4 +22,4 @@ class BitwiseXorBinary extends AbstractBinary
     }
 }
 
-class_alias('TwigKagg\Node\Expression\Binary\BitwiseXorBinary', 'Twig_Node_Expression_Binary_BitwiseXor');
+class_alias('TwigKagg\Node\Expression\Binary\BitwiseXorBinary', 'TwigKagg_Node_Expression_Binary_BitwiseXor');

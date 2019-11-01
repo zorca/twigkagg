@@ -66,4 +66,4 @@ class SandboxedPrintNode extends PrintNode
     }
 }
 
-class_alias('TwigKagg\Node\SandboxedPrintNode', 'Twig_Node_SandboxedPrint');
+class_alias('TwigKagg\Node\SandboxedPrintNode', 'TwigKagg_Node_SandboxedPrint');

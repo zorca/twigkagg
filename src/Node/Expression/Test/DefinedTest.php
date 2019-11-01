@@ -33,7 +33,7 @@ use TwigKagg\Node\Expression\TestExpression;
  */
 class DefinedTest extends TestExpression
 {
-    public function __construct(\Twig_NodeInterface $node, $name, \Twig_NodeInterface $arguments = null, $lineno)
+    public function __construct(\TwigKagg_NodeInterface $node, $name, \TwigKagg_NodeInterface $arguments = null, $lineno)
     {
         if ($node instanceof NameExpression) {
             $node->setAttribute('is_defined_test', true);
@@ -68,4 +68,4 @@ class DefinedTest extends TestExpression
     }
 }
 
-class_alias('TwigKagg\Node\Expression\Test\DefinedTest', 'Twig_Node_Expression_Test_Defined');
+class_alias('TwigKagg\Node\Expression\Test\DefinedTest', 'TwigKagg_Node_Expression_Test_Defined');

@@ -320,4 +320,4 @@ class FilesystemLoader implements LoaderInterface, ExistsLoaderInterface, Source
     }
 }
 
-class_alias('TwigKagg\Loader\FilesystemLoader', 'Twig_Loader_Filesystem');
+class_alias('TwigKagg\Loader\FilesystemLoader', 'TwigKagg_Loader_Filesystem');

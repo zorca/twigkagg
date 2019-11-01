@@ -52,4 +52,4 @@ class DeprecatedNode extends Node
     }
 }
 
-class_alias('TwigKagg\Node\DeprecatedNode', 'Twig_Node_Deprecated');
+class_alias('TwigKagg\Node\DeprecatedNode', 'TwigKagg_Node_Deprecated');

@@ -69,4 +69,4 @@ class FromTokenParser extends AbstractTokenParser
     }
 }
 
-class_alias('TwigKagg\TokenParser\FromTokenParser', 'Twig_TokenParser_From');
+class_alias('TwigKagg\TokenParser\FromTokenParser', 'TwigKagg_TokenParser_From');

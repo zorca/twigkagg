@@ -46,9 +46,9 @@ class NodeTraverser
     /**
      * Traverses a node and calls the registered visitors.
      *
-     * @return \Twig_NodeInterface
+     * @return \TwigKagg_NodeInterface
      */
-    public function traverse(\Twig_NodeInterface $node)
+    public function traverse(\TwigKagg_NodeInterface $node)
     {
         ksort($this->visitors);
         foreach ($this->visitors as $visitors) {
@@ -60,7 +60,7 @@ class NodeTraverser
         return $node;
     }
 
-    protected function traverseForVisitor(NodeVisitorInterface $visitor, \Twig_NodeInterface $node = null)
+    protected function traverseForVisitor(NodeVisitorInterface $visitor, \TwigKagg_NodeInterface $node = null)
     {
         if (null === $node) {
             return;
@@ -86,4 +86,4 @@ class NodeTraverser
     }
 }
 
-class_alias('TwigKagg\NodeTraverser', 'Twig_NodeTraverser');
+class_alias('TwigKagg\NodeTraverser', 'TwigKagg_NodeTraverser');

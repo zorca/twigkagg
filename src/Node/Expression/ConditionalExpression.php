@@ -35,4 +35,4 @@ class ConditionalExpression extends AbstractExpression
     }
 }
 
-class_alias('TwigKagg\Node\Expression\ConditionalExpression', 'Twig_Node_Expression_Conditional');
+class_alias('TwigKagg\Node\Expression\ConditionalExpression', 'TwigKagg_Node_Expression_Conditional');

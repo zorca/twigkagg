@@ -39,4 +39,4 @@ class SecurityNotAllowedPropertyError extends SecurityError
     }
 }
 
-class_alias('TwigKagg\Sandbox\SecurityNotAllowedPropertyError', 'Twig_Sandbox_SecurityNotAllowedPropertyError');
+class_alias('TwigKagg\Sandbox\SecurityNotAllowedPropertyError', 'TwigKagg_Sandbox_SecurityNotAllowedPropertyError');

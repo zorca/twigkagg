@@ -20,7 +20,7 @@ use TwigKagg\Compiler;
  */
 class SandboxNode extends Node
 {
-    public function __construct(\Twig_NodeInterface $body, $lineno, $tag = null)
+    public function __construct(\TwigKagg_NodeInterface $body, $lineno, $tag = null)
     {
         parent::__construct(['body' => $body], [], $lineno, $tag);
     }
@@ -44,4 +44,4 @@ class SandboxNode extends Node
     }
 }
 
-class_alias('TwigKagg\Node\SandboxNode', 'Twig_Node_Sandbox');
+class_alias('TwigKagg\Node\SandboxNode', 'TwigKagg_Node_Sandbox');

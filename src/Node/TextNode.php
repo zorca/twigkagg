@@ -37,4 +37,4 @@ class TextNode extends Node implements NodeOutputInterface
     }
 }
 
-class_alias('TwigKagg\Node\TextNode', 'Twig_Node_Text');
+class_alias('TwigKagg\Node\TextNode', 'TwigKagg_Node_Text');

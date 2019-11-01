@@ -84,4 +84,4 @@ class TwigTest
     }
 }
 
-class_alias('TwigKagg\TwigTest', 'Twig_SimpleTest');
+class_alias('TwigKagg\TwigTest', 'TwigKagg_SimpleTest');

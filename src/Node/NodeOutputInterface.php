@@ -20,4 +20,4 @@ interface NodeOutputInterface
 {
 }
 
-class_alias('TwigKagg\Node\NodeOutputInterface', 'Twig_NodeOutputInterface');
+class_alias('TwigKagg\Node\NodeOutputInterface', 'TwigKagg_NodeOutputInterface');

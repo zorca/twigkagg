@@ -22,4 +22,4 @@ class PosUnary extends AbstractUnary
     }
 }
 
-class_alias('TwigKagg\Node\Expression\Unary\PosUnary', 'Twig_Node_Expression_Unary_Pos');
+class_alias('TwigKagg\Node\Expression\Unary\PosUnary', 'TwigKagg_Node_Expression_Unary_Pos');

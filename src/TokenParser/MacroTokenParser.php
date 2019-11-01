@@ -65,4 +65,4 @@ class MacroTokenParser extends AbstractTokenParser
     }
 }
 
-class_alias('TwigKagg\TokenParser\MacroTokenParser', 'Twig_TokenParser_Macro');
+class_alias('TwigKagg\TokenParser\MacroTokenParser', 'TwigKagg_TokenParser_Macro');

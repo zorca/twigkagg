@@ -40,7 +40,7 @@ class DebugExtension extends AbstractExtension
     }
 }
 
-class_alias('TwigKagg\Extension\DebugExtension', 'Twig_Extension_Debug');
+class_alias('TwigKagg\Extension\DebugExtension', 'TwigKagg_Extension_Debug');
 }
 
 namespace {

@@ -783,7 +783,7 @@ class TemplateMagicMethodExceptionObject
 
 class CExtDisablingNodeVisitor implements NodeVisitorInterface
 {
-    public function enterNode(\Twig_NodeInterface $node, Environment $env)
+    public function enterNode(\TwigKagg_NodeInterface $node, Environment $env)
     {
         if ($node instanceof GetAttrExpression) {
             $node->setAttribute('disable_c_ext', true);
@@ -792,7 +792,7 @@ class CExtDisablingNodeVisitor implements NodeVisitorInterface
         return $node;
     }
 
-    public function leaveNode(\Twig_NodeInterface $node, Environment $env)
+    public function leaveNode(\TwigKagg_NodeInterface $node, Environment $env)
     {
         return $node;
     }

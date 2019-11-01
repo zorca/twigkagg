@@ -302,4 +302,4 @@ abstract class CallExpression extends AbstractExpression
     }
 }
 
-class_alias('TwigKagg\Node\Expression\CallExpression', 'Twig_Node_Expression_Call');
+class_alias('TwigKagg\Node\Expression\CallExpression', 'TwigKagg_Node_Expression_Call');

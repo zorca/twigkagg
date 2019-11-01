@@ -36,4 +36,4 @@ class TextDumper extends BaseDumper
     }
 }
 
-class_alias('TwigKagg\Profiler\Dumper\TextDumper', 'Twig_Profiler_Dumper_Text');
+class_alias('TwigKagg\Profiler\Dumper\TextDumper', 'TwigKagg_Profiler_Dumper_Text');

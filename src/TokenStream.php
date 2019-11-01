@@ -198,4 +198,4 @@ class TokenStream
     }
 }
 
-class_alias('TwigKagg\TokenStream', 'Twig_TokenStream');
+class_alias('TwigKagg\TokenStream', 'TwigKagg_TokenStream');

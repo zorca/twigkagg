@@ -41,4 +41,4 @@ class EnterProfileNode extends Node
     }
 }
 
-class_alias('TwigKagg\Profiler\Node\EnterProfileNode', 'Twig_Profiler_Node_EnterProfile');
+class_alias('TwigKagg\Profiler\Node\EnterProfileNode', 'TwigKagg_Profiler_Node_EnterProfile');

@@ -22,4 +22,4 @@ class SecurityError extends Error
 {
 }
 
-class_alias('TwigKagg\Sandbox\SecurityError', 'Twig_Sandbox_SecurityError');
+class_alias('TwigKagg\Sandbox\SecurityError', 'TwigKagg_Sandbox_SecurityError');

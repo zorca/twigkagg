@@ -27,4 +27,4 @@ class ConstantExpression extends AbstractExpression
     }
 }
 
-class_alias('TwigKagg\Node\Expression\ConstantExpression', 'Twig_Node_Expression_Constant');
+class_alias('TwigKagg\Node\Expression\ConstantExpression', 'TwigKagg_Node_Expression_Constant');

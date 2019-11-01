@@ -28,4 +28,4 @@ interface RuntimeLoaderInterface
     public function load($class);
 }
 
-class_alias('TwigKagg\RuntimeLoader\RuntimeLoaderInterface', 'Twig_RuntimeLoaderInterface');
+class_alias('TwigKagg\RuntimeLoader\RuntimeLoaderInterface', 'TwigKagg_RuntimeLoaderInterface');

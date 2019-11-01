@@ -56,4 +56,4 @@ class FilterTokenParser extends AbstractTokenParser
     }
 }
 
-class_alias('TwigKagg\TokenParser\FilterTokenParser', 'Twig_TokenParser_Filter');
+class_alias('TwigKagg\TokenParser\FilterTokenParser', 'TwigKagg_TokenParser_Filter');

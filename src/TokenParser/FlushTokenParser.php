@@ -36,4 +36,4 @@ class FlushTokenParser extends AbstractTokenParser
     }
 }
 
-class_alias('TwigKagg\TokenParser\FlushTokenParser', 'Twig_TokenParser_Flush');
+class_alias('TwigKagg\TokenParser\FlushTokenParser', 'TwigKagg_TokenParser_Flush');
